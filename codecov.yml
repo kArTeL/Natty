@@ -35,4 +35,5 @@ comment:
   require_changes: no
 
 ignore:
-  - "Tapp/Autogen"  # ignore folders and all its contents
+  - "Natty/Autogen"  # ignore folders and all its contents
+  - "Pods"  # ignore folders and all its contents

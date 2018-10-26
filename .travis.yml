@@ -4,15 +4,11 @@ rvm:
 - 2.3
 cache:
 - cocoapods
-# notifications:
-#   slack: soinlabs:oDBozILcNweAFVXyweHVPrWw
-#   on_success: always
-#   on_failure: always
 env:
   global:
   - LC_CTYPE=en_US.UTF-8
   - LANG=en_US.UTF-8
-  - secure: DUz0/wjyPyaW5R/+y+M8Ge8WTUBJV/U7XEIekHOUbSZTlxN1XWETo+SJkLfnu4kVSzHg4AF+0SInaXQc5vHM2I1++2Vm57zrYq4qSN6KT6RmlWpsT7/ub09CNkZPQpTgiAlpClP3rJi7+pJnh8lZXWxWz3E8hOT579QD+6425gUvlFLMGTtmTwWYbqAh+0X1aNqiVrjfp844Dgv+3VqVA4tjfYn+kr8Dr8lJhKH95p/2jZpZoYQ9K4wlKWkq1ZJcXgeQVW9zLrzbPR+7nfLPVt501D+c4HRmG6KSlKwHeNMgRadWiG59fGOGPUAaZUC68U/nYZGhWMRBcic6NQN8jSs7xiX6zK/WBJWq1Xw2UyyVDt9nlqBrSZOVjeBovIzmSGkJVgswB1u/ARRBIN/UPmtHjS2GO/BkcyUljauJd/Uy1qKg1sQbu6fXUgB32mqpwHlbkZeVS59/PWOSKKIH6n02/KdVRUyu3UNPCAQh1TgE1Q62PBrx7E2cfqG3YzsEzf1nT33KDZ9MAqv5auzjbaO3ZfPHOfa6xW06hW55VKbQ4dEHe2kCJobNT10jo1/tMRiJLumJbG0h2Mjt0Qsd9MdIgyy15cL6XrqtmCjqkHnsDCNuSD07HI4MLR7X3HM4Fd9ob/FUM40u3EeML7/gWLTsmDh0za7grFSfZqeeB64=
+  - secure: a515mSeavjQ9/TSzTMmXq4bqaXVGCP38+Pk5apZxFwV9Bt1yoE8ujog0wRDRLMFGVtaEmH73ZDayG9/0MAKkSdwv2cfwuWdpDQa0Kj4ErPNvc7W+7NGutcuOUVFrZvDBs/1C/jgb6v5tKk7Mk7ckdcM32I2qiH85ZIyRQ5uK/2K+t77giRm+fUw1QQO3wFWWV382khXT9fJKNxQtsDENpZOcCA/x7CZhJYd0nYge4Ijdw8k+T8f/620D+KYKZENJLmVMCbifAo0kj62COBpMZab7QrRu2ToTvdkXxWuNGMhwyXuRWJ8L4VUGppaRzpERunfpTdO2IRZ1okw1YOHUwO/w3EtXi0HnFEOWxU4uj0vTrgptr24QyzA4Skgue9i/01dKcy9+RW9e58HAXQyUQy8fEgpiPp92+tpcEw5L2avYNZqYg5vcQE9wxEYL1d6w5s1CvVxx3bdE7ae4VZvuBLD3b5urzXmurc0yVyAqt6FHtkfX7+Un9bO57aUZlO/6NDwyf41qhRSnCvXykX9/xvTQouz3Ro6BHJCXMvYoVJW92LCMAEE7da09zhyVhSYXC7rSqryVg8Ete5nqZ8yJxPZsyUS2XdWDmofTmKWhg99XXiY364/LDfY0pzHx/mftwECA69/iwcyR9neTKznf0HHvpFXpkywD4tR33QRPmqE=
 before_install:
 - bundle update
 - bundle install
@@ -24,4 +20,4 @@ script:
 - bash travis/script.sh
 after_success:
 - bash travis/update_documentation.sh
-- bash <(curl -s https://codecov.io/bash) -t dbbd6503-62cb-40b3-a732-8f17516a9c43 -J 'Tapp Swift'
+- bash <(curl -s https://codecov.io/bash)

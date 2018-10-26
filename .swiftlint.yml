@@ -5,9 +5,9 @@ bled_rules: # rule identifiers to exclude from running
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
-  - Tapp/Autogen
-  - TappTests
-  - TappUITests
+  - Natty/Autogen
+  - NattyTests
+  - NattyUITests
 # File length rule
 file_length:
   warning: 500

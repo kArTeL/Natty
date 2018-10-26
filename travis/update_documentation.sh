@@ -15,6 +15,7 @@ if [ "${TRAVIS_EVENT_TYPE}" != "push" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" -o
     exit 0
 fi
 
+
 # Run the documentation creation function in this case jazzy.
 doCompile 
 

@@ -7,6 +7,7 @@ target 'Natty' do
 
   # Pods for Natty
   pod 'Kingfisher', '~> 4.0'
+  pod 'SimulatorStatusMagic', :configurations => ['Debug']
   
   target 'NattyTests' do
     inherit! :search_paths
@@ -15,6 +16,7 @@ target 'Natty' do
 
   target 'NattyUITests' do
     inherit! :search_paths
+    
     # Pods for testing
   end
 

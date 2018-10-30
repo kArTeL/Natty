@@ -1,16 +1,20 @@
 PODS:
   - Kingfisher (4.10.0)
+  - SimulatorStatusMagic (2.3.2)
 
 DEPENDENCIES:
   - Kingfisher (~> 4.0)
+  - SimulatorStatusMagic
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Kingfisher
+    - SimulatorStatusMagic
 
 SPEC CHECKSUMS:
   Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
+  SimulatorStatusMagic: 0c0e711acef6e70dd8a0710962347635a9cdef24
 
-PODFILE CHECKSUM: ad9443b2c7422b7a99b92c0b92e8a25248c99337
+PODFILE CHECKSUM: 1746c534a001ad99d0feef1dcd984e1202f2727f
 
 COCOAPODS: 1.5.3

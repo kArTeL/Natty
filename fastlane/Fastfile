@@ -19,6 +19,12 @@ platform :ios do
   desc "Generate new localized screenshots"
   lane :screenshots do
     capture_screenshots(scheme: "Natty")
+    frame_screenshots(white: true)
+  end
+
+  desc "Create the frame for screenshots"
+  lane :frame do
+    frame_screenshots(rose_gold: true)
   end
 
   desc "Runs all the tests"

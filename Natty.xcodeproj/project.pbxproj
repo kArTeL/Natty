@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14D586292183D1BE0059A89E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D586272183D0350059A89E /* SnapshotHelper.swift */; };
 		14F29674215EC7DD0059E277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F29673215EC7DD0059E277 /* AppDelegate.swift */; };
 		14F29679215EC7DD0059E277 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F29677215EC7DD0059E277 /* Login.storyboard */; };
 		14F2967B215EC7DE0059E277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F2967A215EC7DE0059E277 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		0EFA0A029DB8066DF69CC93B /* Pods-NattyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NattyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NattyTests/Pods-NattyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		14D586272183D0350059A89E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = NattyUITests/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		14F29670215EC7DD0059E277 /* Natty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F29673215EC7DD0059E277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F29678215EC7DD0059E277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		14F29692215EC7DE0059E277 /* NattyUITests */ = {
 			isa = PBXGroup;
 			children = (
+				14D586272183D0350059A89E /* SnapshotHelper.swift */,
 				14F29693215EC7DE0059E277 /* NattyUITests.swift */,
 				14F29695215EC7DE0059E277 /* Info.plist */,
 			);
@@ -416,12 +419,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Natty/Pods-Natty-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SimulatorStatusMagic/SimulatorStatusMagic.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimulatorStatusMagic.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -509,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F29694215EC7DE0059E277 /* NattyUITests.swift in Sources */,
+				14D586292183D1BE0059A89E /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,7 +684,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.neil.Natty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -697,7 +703,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.neil.Natty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

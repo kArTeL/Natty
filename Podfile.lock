@@ -1,4 +1,5 @@
 PODS:
+<<<<<<< HEAD
   - FPSCounter (3.0.0)
   - Kingfisher (4.10.0)
   - PINCache (3.0.1-beta.6):
@@ -59,5 +60,24 @@ SPEC CHECKSUMS:
   Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
 
 PODFILE CHECKSUM: 7915544bd4b21fa311562bc60756774050bab345
+=======
+  - Kingfisher (4.10.0)
+  - SimulatorStatusMagic (2.3.2)
+
+DEPENDENCIES:
+  - Kingfisher (~> 4.0)
+  - SimulatorStatusMagic
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kingfisher
+    - SimulatorStatusMagic
+
+SPEC CHECKSUMS:
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
+  SimulatorStatusMagic: 0c0e711acef6e70dd8a0710962347635a9cdef24
+
+PODFILE CHECKSUM: 1746c534a001ad99d0feef1dcd984e1202f2727f
+>>>>>>> c7d09500a6b2aef16c6ef3d9f63fbbede51c4f24
 
 COCOAPODS: 1.5.3

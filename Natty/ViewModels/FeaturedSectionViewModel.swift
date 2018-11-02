@@ -6,7 +6,11 @@
 //  Copyright © 2018 Natty. All rights reserved.
 //
 
+<<<<<<< HEAD
 import Foundation
+=======
+import UIKit
+>>>>>>> c7d09500a6b2aef16c6ef3d9f63fbbede51c4f24
 
 class FeaturedSectionViewModel {
 

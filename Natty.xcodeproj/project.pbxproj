@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		144DC5B8218D154600286021 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 144DC5B7218D154600286021 /* Localizable.strings */; };
 		14B6AFC8218B89F5006607B8 /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6AFC7218B89F5006607B8 /* UserDefaultExtension.swift */; };
 		14B6AFCA218B8A8D006607B8 /* WindowSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6AFC9218B8A8D006607B8 /* WindowSize.swift */; };
 		14B6AFCC218CBE17006607B8 /* GridSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6AFCB218CBE17006607B8 /* GridSectionTableViewCell.swift */; };
@@ -94,6 +95,7 @@
 
 /* Begin PBXFileReference section */
 		0EFA0A029DB8066DF69CC93B /* Pods-NattyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NattyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NattyTests/Pods-NattyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		144DC5B7218D154600286021 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		14B6AFC7218B89F5006607B8 /* UserDefaultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtension.swift; sourceTree = "<group>"; };
 		14B6AFC9218B8A8D006607B8 /* WindowSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowSize.swift; sourceTree = "<group>"; };
 		14B6AFCB218CBE17006607B8 /* GridSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSectionTableViewCell.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				14F29673215EC7DD0059E277 /* AppDelegate.swift */,
 				14F2967C215EC7DE0059E277 /* LaunchScreen.storyboard */,
 				14F2967F215EC7DE0059E277 /* Info.plist */,
+				144DC5B7218D154600286021 /* Localizable.strings */,
 			);
 			path = Natty;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				14BD329C218912B00038FB0A /* Gotham-Bold.otf in Resources */,
 				14F2967E215EC7DE0059E277 /* LaunchScreen.storyboard in Resources */,
 				14BD329F218912B00038FB0A /* SF-Pro-Display-Ultralight.otf in Resources */,
+				144DC5B8218D154600286021 /* Localizable.strings in Resources */,
 				14BD3293218912B00038FB0A /* roboto-light.ttf in Resources */,
 				14BD329E218912B00038FB0A /* SF-Pro-Display-HeavyItalic.otf in Resources */,
 				14BD3292218912B00038FB0A /* roboto-medium.ttf in Resources */,

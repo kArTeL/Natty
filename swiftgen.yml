@@ -1,0 +1,30 @@
+strings:
+  inputs: Natty/Base.lproj/Localizable.strings
+  outputs:
+    templateName: structured-swift4
+    output: Natty/Autogen/strings.swift
+xcassets:
+  inputs:
+   - Natty/Resources/Assets.xcassets
+  outputs:
+    templateName: swift4
+    output: Natty/Autogen/assets.swift
+ib:
+  inputs: Natty/UI/
+  outputs:
+    - templateName: scenes-swift4
+      output: Natty/Autogen/Scenes.swift
+    - templateName: segues-swift4
+      output: Natty/Autogen/Segues.swift
+fonts:
+  inputs:
+   - Natty/Resources/Fonts/
+  outputs:
+    templateName: swift4
+    output: Natty/Autogen/fonts.swift
+colors:
+  inputs:
+   - Natty/Resources/colors.txt
+  outputs:
+    templateName: swift4
+    output: Natty/Autogen/colors.swift

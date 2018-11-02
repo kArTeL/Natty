@@ -1,0 +1,53 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Generate new localized screenshots"
+  lane :screenshots do
+    capture_screenshots(scheme: "Natty")
+    frame_screenshots(white: true)
+  end
+
+  desc "Create the frame for screenshots"
+  lane :frame do
+    frame_screenshots(rose_gold: true)
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    cocoapods
+    scan(
+      scheme: "Natty",
+      sdk: "iphonesimulator",
+      clean: true,
+      device: "iPhone X",
+      code_coverage: true
+    )
+  end
+
+  desc "Calculate test coverage"
+  lane :report_test_coverage do
+    xcov(
+      scheme: "Natty",
+      output_directory: "xcov_output",
+      skip_slack: true
+    )
+   end
+
+end
+
+

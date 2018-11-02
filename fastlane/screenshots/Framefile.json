@@ -1,0 +1,50 @@
+{
+    "device_frame_version": "latest",
+    "default": {
+      "keyword": {
+        "font": "./fonts/IndieFlower.ttf"
+      },
+      "title": {
+        "font": "./fonts/ShadowsIntoLight.ttf",
+        "color": "#545454"
+      },
+      "background": "./background.jpg",
+      "padding": 50,
+      "show_complete_frame": true,
+      "stack_title" : false,
+      "title_below_image": false
+    },
+  
+    "data": [
+      {
+        "filter": "01MainScreen",
+        "keyword": {
+          "color": "#d21559",
+          "text": "Keyword1"
+        },
+        "title": {
+            "color": "#d2e159",
+            "text": "title1"
+        }
+
+      },
+      {
+        "filter": "Organizing",
+        "keyword": {
+          "color": "#feb909"
+        }
+      },
+      {
+        "filter": "Sharing",
+        "keyword": {
+          "color": "#aa4dbc"
+        }
+      },
+      {
+        "filter": "Styling",
+        "keyword": {
+          "color": "#31bb48"
+        }
+      }
+    ]
+  }

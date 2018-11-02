@@ -1,0 +1,19 @@
+bled_rules: # rule identifiers to exclude from running
+  - line_length
+  - force_try
+  - trailing_whitespace
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - Natty/Autogen
+  - NattyTests
+  - NattyUITests
+# File length rule
+file_length:
+  warning: 500
+  error: 800
+disabled_rules: # rule identifiers to exclude from running
+  - trailing_whitespace
+  - line_length
+
+

@@ -1,0 +1,23 @@
+language: swift
+osx_image: xcode10
+rvm:
+- 2.3
+cache:
+- cocoapods
+env:
+  global:
+  - LC_CTYPE=en_US.UTF-8
+  - LANG=en_US.UTF-8
+  - secure: a515mSeavjQ9/TSzTMmXq4bqaXVGCP38+Pk5apZxFwV9Bt1yoE8ujog0wRDRLMFGVtaEmH73ZDayG9/0MAKkSdwv2cfwuWdpDQa0Kj4ErPNvc7W+7NGutcuOUVFrZvDBs/1C/jgb6v5tKk7Mk7ckdcM32I2qiH85ZIyRQ5uK/2K+t77giRm+fUw1QQO3wFWWV382khXT9fJKNxQtsDENpZOcCA/x7CZhJYd0nYge4Ijdw8k+T8f/620D+KYKZENJLmVMCbifAo0kj62COBpMZab7QrRu2ToTvdkXxWuNGMhwyXuRWJ8L4VUGppaRzpERunfpTdO2IRZ1okw1YOHUwO/w3EtXi0HnFEOWxU4uj0vTrgptr24QyzA4Skgue9i/01dKcy9+RW9e58HAXQyUQy8fEgpiPp92+tpcEw5L2avYNZqYg5vcQE9wxEYL1d6w5s1CvVxx3bdE7ae4VZvuBLD3b5urzXmurc0yVyAqt6FHtkfX7+Un9bO57aUZlO/6NDwyf41qhRSnCvXykX9/xvTQouz3Ro6BHJCXMvYoVJW92LCMAEE7da09zhyVhSYXC7rSqryVg8Ete5nqZ8yJxPZsyUS2XdWDmofTmKWhg99XXiY364/LDfY0pzHx/mftwECA69/iwcyR9neTKznf0HHvpFXpkywD4tR33QRPmqE=
+before_install:
+- bundle update
+- bundle install
+- bundle exec pod repo update
+install: true
+before_script:
+- bundle exec danger
+script:
+- bash travis/script.sh
+after_success:
+- bash travis/update_documentation.sh
+- bash <(curl -s https://codecov.io/bash)

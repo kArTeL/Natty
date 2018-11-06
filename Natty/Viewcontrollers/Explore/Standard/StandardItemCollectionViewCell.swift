@@ -43,6 +43,8 @@ class StandardItemCollectionViewCell: ASCellNode {
                 NSAttributedString.Key.foregroundColor: UIColor.darkGray,
                 NSAttributedString.Key.kern: 0.2
             ])
+        backgroundColor = .green
+        subtitleLabel.backgroundColor = .yellow
         
     }
     

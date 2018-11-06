@@ -25,6 +25,8 @@ class StandardSectionTableViewCell: ASCellNode {
         collectionViewNode.delegate = self
         collectionViewNode.dataSource = self
         selectionStyle = .none
+        backgroundColor = .red
+        collectionViewNode.backgroundColor = .blue
     }
     
     convenience init(sectionViewModel: StandardSectionViewModel) {
@@ -47,9 +49,9 @@ class StandardSectionTableViewCell: ASCellNode {
         
         let numbersOfLines = Double(sectionViewModel.numberOfRows/2)
         let collectionViewCellWidth = ((WindowSize.size.width - flowLayout.inset*2)/2) - flowLayout.minimumInteritemSpacing
+        //cellSize = CGSize(width: collectionViewCellWidth, height: collectionViewCellWidth + 60.0)
         
-        
-        cellSize = CGSize(width: collectionViewCellWidth, height: collectionViewCellWidth + 60.0 + UIConstants.bottomPadding)
+        cellSize = CGSize(width: collectionViewCellWidth, height: collectionViewCellWidth + 60.0 + UIConstants.bottomPadding - UIConstants.inset - UIConstants.inset/2)
         
         
         let collectionViewHeight =  numbersOfLines * Double(cellSize.height) + numbersOfLines * Double(flowLayout.minimumLineSpacing)
@@ -68,7 +70,7 @@ class StandardSectionTableViewCell: ASCellNode {
             alignItems: .start,
             children: [ titleLabel, subtitleLabel])
         
-        let labelContainerSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 18, bottom: 10, right: 5), child: labelsStack)
+        let labelContainerSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10, left: 18, bottom: 10, right: 5), child: labelsStack)
         
         let collectionViewStack = ASStackLayoutSpec(
             direction: .vertical,

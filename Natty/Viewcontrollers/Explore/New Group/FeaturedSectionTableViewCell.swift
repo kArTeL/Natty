@@ -25,10 +25,12 @@ class FeaturedSectionTableViewCell: ASCellNode {
         collectionViewNode.delegate = self
         collectionViewNode.dataSource = self
         collectionViewNode.view.showsHorizontalScrollIndicator = false
-        collectionViewNode.style.preferredSize = CGSize(width: WindowSize.size.width, height: 300)
+        collectionViewNode.style.preferredSize = CGSize(width: WindowSize.size.width, height: 295)
         selectionStyle = .none
         collectionViewNode.placeholderEnabled = true
         automaticallyManagesSubnodes = true
+        backgroundColor = .yellow
+        collectionViewNode.backgroundColor = .white
     }
     
     convenience init(sectionViewModel: FeaturedSectionViewModel) {
@@ -59,7 +61,7 @@ class FeaturedSectionTableViewCell: ASCellNode {
             alignItems: .start,
             children: [ titleLabel, subtitleLabel])
         
-        let labelContainerSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 18, bottom: 10, right: 5), child: labelsStack)
+        let labelContainerSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10, left: 18, bottom: 10, right: 5), child: labelsStack)
         
         let collectionViewStack = ASStackLayoutSpec(
             direction: .vertical,

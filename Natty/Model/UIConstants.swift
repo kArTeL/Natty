@@ -10,5 +10,5 @@ import UIKit
 
 struct UIConstants {
     static let inset: CGFloat = 18.0
-    static let bottomPadding: CGFloat = 24.0
+    static let bottomPadding: CGFloat = 50.0
 }

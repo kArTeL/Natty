@@ -109,13 +109,13 @@
 		14B6AFDC218CC154006607B8 /* GridItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemTableViewCell.swift; sourceTree = "<group>"; };
 		14B6AFDE218CEA7E006607B8 /* GridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFlowLayout.swift; sourceTree = "<group>"; };
 		14B6AFE2218CF6F9006607B8 /* SnapPagingLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapPagingLayout.swift; sourceTree = "<group>"; };
-		14B6AFE5218CF95B006607B8 /* StandarSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StandarSectionTableViewCell.swift; path = Natty/Viewcontrollers/Explore/StandarSectionTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		14B6AFE5218CF95B006607B8 /* StandarSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StandarSectionTableViewCell.swift; path = Natty/Viewcontrollers/Explore/Standard/StandarSectionTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		14B6AFE9218CF9D1006607B8 /* StandardItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardItemViewModel.swift; sourceTree = "<group>"; };
 		14B6AFEB218CF9EB006607B8 /* MStandarSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStandarSection.swift; sourceTree = "<group>"; };
 		14B6AFED218CF9FA006607B8 /* MStandarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStandarItem.swift; sourceTree = "<group>"; };
-		14B6AFEF218CFB8F006607B8 /* StandardItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StandardItemCollectionViewCell.swift; path = "Natty/Model/New Group/StandardItemCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		14B6AFEF218CFB8F006607B8 /* StandardItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StandardItemCollectionViewCell.swift; path = Natty/Viewcontrollers/Explore/Standard/StandardItemCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		14B6AFF1218CFD27006607B8 /* StandardSectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardSectionViewModel.swift; sourceTree = "<group>"; };
-		14B6AFF3218CFEDF006607B8 /* StandardFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StandardFlowLayout.swift; path = "Natty/Model/New Group/StandardFlowLayout.swift"; sourceTree = SOURCE_ROOT; };
+		14B6AFF3218CFEDF006607B8 /* StandardFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StandardFlowLayout.swift; path = Natty/Viewcontrollers/Explore/Standard/StandardFlowLayout.swift; sourceTree = SOURCE_ROOT; };
 		14B6AFF5218D0A59006607B8 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		14BD32732188EFAF0038FB0A /* FeaturedSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedSectionTableViewCell.swift; sourceTree = "<group>"; };
 		14BD32752188FA310038FB0A /* FeaturedItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -239,17 +239,6 @@
 			);
 			name = Grid;
 			path = "New Group1";
-			sourceTree = "<group>";
-		};
-		14B6AFE4218CF72A006607B8 /* Standar */ = {
-			isa = PBXGroup;
-			children = (
-				14B6AFE5218CF95B006607B8 /* StandarSectionTableViewCell.swift */,
-				14B6AFEF218CFB8F006607B8 /* StandardItemCollectionViewCell.swift */,
-				14B6AFF3218CFEDF006607B8 /* StandardFlowLayout.swift */,
-			);
-			name = Standar;
-			path = "New Group2";
 			sourceTree = "<group>";
 		};
 		14BD32792189125D0038FB0A /* Resources */ = {
@@ -404,7 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				14D5862B2188E9840059A89E /* ExploreViewController.swift */,
-				14B6AFE4218CF72A006607B8 /* Standar */,
+				2852CABA21914D940099CF67 /* Standard */,
 				14B6AFE1218CF6E1006607B8 /* Grid */,
 				14B6AFE0218CF6CF006607B8 /* Featured */,
 			);
@@ -419,6 +408,16 @@
 				14B6AFC7218B89F5006607B8 /* UserDefaultExtension.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		2852CABA21914D940099CF67 /* Standard */ = {
+			isa = PBXGroup;
+			children = (
+				14B6AFE5218CF95B006607B8 /* StandarSectionTableViewCell.swift */,
+				14B6AFEF218CFB8F006607B8 /* StandardItemCollectionViewCell.swift */,
+				14B6AFF3218CFEDF006607B8 /* StandardFlowLayout.swift */,
+			);
+			path = Standard;
 			sourceTree = "<group>";
 		};
 		72089FC2A5E272D58B801C6B /* Pods */ = {

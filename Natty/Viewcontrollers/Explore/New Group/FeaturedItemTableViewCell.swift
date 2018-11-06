@@ -18,12 +18,15 @@ class FeaturedItemTableViewCell: ASCellNode {
         imageView.contentMode = .scaleAspectFill
         automaticallyManagesSubnodes = true
         imageView.shouldRenderProgressImages = true
+        subtitleLabel.maximumNumberOfLines = 2
         subtitleLabel.truncationAttributedText = NSAttributedString(string: " ...")
         subtitleLabel.additionalTruncationMessage = NSAttributedString(string: "see more", attributes: [
             NSAttributedString.Key.font: FontFamily.SFProDisplay.bold.font(size: 15),
             NSAttributedString.Key.foregroundColor: UIColor.darkGray,
             NSAttributedString.Key.kern: 0.2
             ])
+        backgroundColor = .blue
+        subtitleLabel.backgroundColor = .red
         clipsToBounds = true
         cornerRadius = 1.5
 //        addSubnode(imageView)
@@ -58,7 +61,7 @@ class FeaturedItemTableViewCell: ASCellNode {
         let width = WindowSize.size.width - WindowSize.size.width * 0.18
         imageView.style.preferredSize       = CGSize(width:  width, height: 185)
         titleLabel.style.preferredSize      = CGSize(width:  width, height: 25)
-        subtitleLabel.style.preferredSize   = CGSize(width:  width, height: 60)
+        subtitleLabel.style.preferredSize   = CGSize(width:  width, height: 35)
         
         let labelStack  =  ASStackLayoutSpec(
             direction: .vertical,

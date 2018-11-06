@@ -23,6 +23,7 @@ class GridSectionTableViewCell: ASCellNode {
         collectionViewNode.delegate = self
         collectionViewNode.dataSource = self
         selectionStyle = .none
+        backgroundColor = .green
     }
     
     convenience init(sectionViewModel: GridSectionViewModel) {
@@ -47,8 +48,9 @@ class GridSectionTableViewCell: ASCellNode {
         let collectionViewCellWidth = ((WindowSize.size.width - flowLayout.inset*2)/3) - (flowLayout.minimumInteritemSpacing * 2)
 
         let numbersOfLines = Double(gridSectionViewModel.numberOfRows/3)
-        let collectionViewHeight =  numbersOfLines * Double(collectionViewCellWidth) + numbersOfLines*Double(flowLayout.minimumLineSpacing) + Double(UIConstants.bottomPadding)
-            
+       let collectionViewHeight =  numbersOfLines * Double(collectionViewCellWidth) + numbersOfLines*Double(flowLayout.minimumLineSpacing) + Double(UIConstants.bottomPadding)
+        
+          // let collectionViewHeight =  numbersOfLines * Double(collectionViewCellWidth) + numbersOfLines*Double(flowLayout.minimumLineSpacing) + 50.0
         collectionViewNode.style.preferredSize = CGSize(width:collectionViewWidth, height:CGFloat(collectionViewHeight))
         
     }
@@ -61,7 +63,7 @@ class GridSectionTableViewCell: ASCellNode {
             alignItems: .start,
             children: [ titleLabel, subtitleLabel])
         
-        let labelContainerSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 18, bottom: 10, right: 5), child: labelsStack)
+        let labelContainerSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10, left: 18, bottom: 10, right: 5), child: labelsStack)
         
         let collectionViewStack = ASStackLayoutSpec(
             direction: .vertical,

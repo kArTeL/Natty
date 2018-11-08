@@ -40,14 +40,13 @@ class ExploreListViewModel {
          let standarItem = MStandardItem(title: "Maria Graciela", subtitle:"La mejor limpiadora del oeste", image: "https://s3.amazonaws.com/files.shopmoment.com/general/momentist/vsco-33.jpg?mtime=20170410182229")
         let standardSection = MStandardSection(title: "Conozca a las mejores", subtitle: "Las mejores limpiadoras de Costa Rica", items: [standarItem, standarItem, standarItem, standarItem])
         
+        let videoSection = MVideoSection(title: "El mejor video de la semana", subtitle: "Tenemos a la instructura galardonada como la super estrella", videoURL: URL(string: "https://s3-us-west-1.amazonaws.com/tapp-images/offersVideos/nfl3/nfl3.m3u8"))
+        
         sections.append(featuredSection)
         sections.append(gridSection)
-//        sections.append(gridSection)
-//        sections.append(gridSection)
-
         sections.append(standardSection)
+        sections.append(videoSection)
         sections.append(gridSection2)
-        sections.append(featuredSection2)
         sections.append(featuredSection2)
         sections.append(featuredSection2)
         sections.append(featuredSection2)

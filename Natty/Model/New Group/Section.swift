@@ -12,6 +12,7 @@ enum SectionType {
     case featured
     case grid
     case standard
+    case video
 }
 
 protocol Section {

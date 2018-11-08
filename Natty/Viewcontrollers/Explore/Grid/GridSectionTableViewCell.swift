@@ -23,7 +23,7 @@ class GridSectionTableViewCell: ASCellNode {
         collectionViewNode.delegate = self
         collectionViewNode.dataSource = self
         selectionStyle = .none
-        backgroundColor = .green
+//        backgroundColor = .green
     }
     
     convenience init(sectionViewModel: GridSectionViewModel) {

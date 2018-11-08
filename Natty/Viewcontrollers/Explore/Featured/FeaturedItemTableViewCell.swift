@@ -25,8 +25,8 @@ class FeaturedItemTableViewCell: ASCellNode {
             NSAttributedString.Key.foregroundColor: UIColor.darkGray,
             NSAttributedString.Key.kern: 0.2
             ])
-        backgroundColor = .blue
-        subtitleLabel.backgroundColor = .red
+//        backgroundColor = .blue
+//        subtitleLabel.backgroundColor = .red
         clipsToBounds = true
         cornerRadius = 1.5
 //        addSubnode(imageView)

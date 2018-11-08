@@ -15,12 +15,13 @@ class VideoSectionTableViewCell: ASCellNode {
     let subtitleHeight = 40.0
     let titleHeight = 40.0
     let spaceBetweenTitleAndSubtitle = 2.0
-    let spaceBetweenVideo = 4.0
+    let spaceBetweenVideo = 10.0
     var cellSize = CGSize(width: 0.0, height: 0.0)
     
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
+        separatorInset = UIEdgeInsets(top: 0, left: -5000, bottom: 0, right: 5000)
         clipsToBounds = true
     }
     
@@ -28,7 +29,7 @@ class VideoSectionTableViewCell: ASCellNode {
     convenience init(viewModel: VideoSectionViewModel, size: CGSize) {
         self.init()
         cellSize = size
-        let height = Double(size.height) - (subtitleHeight - titleHeight - spaceBetweenTitleAndSubtitle - spaceBetweenVideo - UIConstants.bottomPadding)
+        let height = Double(size.height) - (subtitleHeight - titleHeight - spaceBetweenTitleAndSubtitle - spaceBetweenVideo)
         videoNode.style.preferredSize = CGSize(width: Double(size.width), height: height)
         if let videoURL = viewModel.videoURL {
             videoNode.asset = AVAsset(url: videoURL)
@@ -41,32 +42,32 @@ class VideoSectionTableViewCell: ASCellNode {
         titleLabel.attributedText = NSAttributedString(
             string: viewModel.title,
             attributes: [
-                NSAttributedString.Key.font: FontFamily.SFProDisplay.heavy.font(size: 19),
-                NSAttributedString.Key.foregroundColor: UIColor.darkGray,
-                NSAttributedString.Key.kern: 0.2
+                NSAttributedString.Key.font: FontFamily.SFProDisplay.bold.font(size: 25),
+                NSAttributedString.Key.foregroundColor: UIColor.black,
+                NSAttributedString.Key.kern: -0.3
             ])
         subtitleLabel.attributedText = NSAttributedString(
             string: viewModel.subtitle,
             attributes: [
-                NSAttributedString.Key.font: FontFamily.SFProDisplay.regular.font(size: 15),
-                NSAttributedString.Key.foregroundColor: UIColor.darkGray,
-                NSAttributedString.Key.kern: 0.2
+                NSAttributedString.Key.font: FontFamily.SFProDisplay.regular.font(size: 14),
+                NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+                NSAttributedString.Key.kern: -0.3
             ])
-        backgroundColor = .green
-        subtitleLabel.backgroundColor = .yellow
+//        backgroundColor = .green
+//        subtitleLabel.backgroundColor = .yellow
         
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         
         
-        titleLabel.style.preferredSize      = CGSize(width:  Double(cellSize.width), height: titleHeight)
-        subtitleLabel.style.preferredSize   = CGSize(width:  Double(cellSize.width), height: subtitleHeight)
+//        titleLabel.style.preferredSize      = CGSize(width:  Double(cellSize.width), height: titleHeight)
+//        subtitleLabel.style.preferredSize   = CGSize(width:  Double(cellSize.width), height: subtitleHeight)
         
         
         let labelStack  =  ASStackLayoutSpec(
             direction: .vertical,
-            spacing: 1,
+            spacing: CGFloat(spaceBetweenTitleAndSubtitle),
             justifyContent: .start,
             alignItems: .start,
             children: [titleLabel, subtitleLabel])

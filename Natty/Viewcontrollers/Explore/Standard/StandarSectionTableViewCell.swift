@@ -25,8 +25,8 @@ class StandardSectionTableViewCell: ASCellNode {
         collectionViewNode.delegate = self
         collectionViewNode.dataSource = self
         selectionStyle = .none
-        backgroundColor = .red
-        collectionViewNode.backgroundColor = .blue
+//        backgroundColor = .red
+//        collectionViewNode.backgroundColor = .blue
     }
     
     convenience init(sectionViewModel: StandardSectionViewModel) {

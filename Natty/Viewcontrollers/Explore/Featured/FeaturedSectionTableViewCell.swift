@@ -29,8 +29,8 @@ class FeaturedSectionTableViewCell: ASCellNode {
         selectionStyle = .none
         collectionViewNode.placeholderEnabled = true
         automaticallyManagesSubnodes = true
-        backgroundColor = .yellow
-        collectionViewNode.backgroundColor = .white
+//        backgroundColor = .yellow
+//        collectionViewNode.backgroundColor = .white
     }
     
     convenience init(sectionViewModel: FeaturedSectionViewModel) {

@@ -58,9 +58,9 @@ class ExploreViewController: ASViewController<ASDisplayNode>, ASTableDataSource,
         case .video:
             let videoSection = exploreListViewModel.section(indexPath: indexPath) as! MVideoSection
             let videoSectionViewModel = VideoSectionViewModel(section: videoSection)
-            let cellWidth  = WindowSize.size.width - UIConstants.inset * 2
-            let cellSize = CGSize(width: cellWidth, height: cellWidth * 4/3 + 60 + UIConstants.bottomPadding)
-            return VideoSectionTableViewCell(viewModel: videoSectionViewModel, size:cellSize)
+//            let cellWidth  = WindowSize.size.width - UIConstants.inset * 2
+//            let cellSize = CGSize(width: cellWidth, height: cellWidth * 4/3 + 60 + UIConstants.bottomPadding)
+            return VideoSectionTableViewCell(viewModel: videoSectionViewModel)
         default:
             let standardSection = exploreListViewModel.section(indexPath: indexPath) as! MStandardSection
             let standardSectionViewModel = StandardSectionViewModel(standardSection: standardSection)

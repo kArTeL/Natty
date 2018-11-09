@@ -21,7 +21,7 @@ class FeaturedSectionTableViewCell: ASCellNode {
     
     override init() {
         super.init()
-        separatorInset = UIEdgeInsets(top: 0, left: -5000, bottom: 0, right: 5000)
+        hideSeparator()
         collectionViewNode.delegate = self
         collectionViewNode.dataSource = self
         collectionViewNode.view.showsHorizontalScrollIndicator = false

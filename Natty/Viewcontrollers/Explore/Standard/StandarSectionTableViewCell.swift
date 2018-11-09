@@ -21,12 +21,10 @@ class StandardSectionTableViewCell: ASCellNode {
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
-        separatorInset = UIEdgeInsets(top: 0, left: -5000, bottom: 0, right: 5000)
+        hideSeparator()
         collectionViewNode.delegate = self
         collectionViewNode.dataSource = self
         selectionStyle = .none
-//        backgroundColor = .red
-//        collectionViewNode.backgroundColor = .blue
     }
     
     convenience init(sectionViewModel: StandardSectionViewModel) {
@@ -49,17 +47,9 @@ class StandardSectionTableViewCell: ASCellNode {
         
         let numbersOfLines = Double(sectionViewModel.numberOfRows/2)
         let collectionViewCellWidth = ((WindowSize.size.width - flowLayout.inset*2)/2) - flowLayout.minimumInteritemSpacing
-        //cellSize = CGSize(width: collectionViewCellWidth, height: collectionViewCellWidth + 60.0)
-        
         cellSize = CGSize(width: collectionViewCellWidth, height: collectionViewCellWidth + 60.0 + UIConstants.bottomPadding - UIConstants.inset - UIConstants.inset/2)
-        
-        
         let collectionViewHeight =  numbersOfLines * Double(cellSize.height) + numbersOfLines * Double(flowLayout.minimumLineSpacing)
-//
-        
-        
         collectionViewNode.style.preferredSize = CGSize(width:collectionViewWidth, height:CGFloat(collectionViewHeight))
-        
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

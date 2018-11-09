@@ -19,6 +19,9 @@ internal struct ColorName {
   internal let rgbaValue: UInt32
   internal var color: Color { return Color(named: self) }
 
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#efefef"></span>
+  /// Alpha: 100% <br/> (0xefefefff)
+  internal static let videoBackgroundColor = ColorName(rgbaValue: 0xefefefff)
 }
 // swiftlint:enable identifier_name line_length type_body_length
 

@@ -34,6 +34,8 @@
 		14BBF0C12194F28000C63EB4 /* GridItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BBF0B82194F28000C63EB4 /* GridItemTableViewCell.swift */; };
 		14BBF0C32194F36300C63EB4 /* MVideoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BBF0C22194F36300C63EB4 /* MVideoSection.swift */; };
 		14BBF0C52194F3CE00C63EB4 /* VideoSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BBF0C42194F3CE00C63EB4 /* VideoSectionViewModel.swift */; };
+		14BBF0C7219623E500C63EB4 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BBF0C6219623E500C63EB4 /* colors.swift */; };
+		14BBF0C921963B2100C63EB4 /* ASCellNodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BBF0C821963B2100C63EB4 /* ASCellNodeExtension.swift */; };
 		14BD32782188FDBA0038FB0A /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD32772188FDBA0038FB0A /* MainTabbarController.swift */; };
 		14BD3291218912B00038FB0A /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14BD327C218912AF0038FB0A /* SF-Pro-Display-Thin.otf */; };
 		14BD3292218912B00038FB0A /* roboto-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14BD327D218912AF0038FB0A /* roboto-medium.ttf */; };
@@ -125,6 +127,8 @@
 		14BBF0B82194F28000C63EB4 /* GridItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridItemTableViewCell.swift; sourceTree = "<group>"; };
 		14BBF0C22194F36300C63EB4 /* MVideoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVideoSection.swift; sourceTree = "<group>"; };
 		14BBF0C42194F3CE00C63EB4 /* VideoSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSectionViewModel.swift; sourceTree = "<group>"; };
+		14BBF0C6219623E500C63EB4 /* colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
+		14BBF0C821963B2100C63EB4 /* ASCellNodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASCellNodeExtension.swift; sourceTree = "<group>"; };
 		14BD32772188FDBA0038FB0A /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		14BD327C218912AF0038FB0A /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
 		14BD327D218912AF0038FB0A /* roboto-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "roboto-medium.ttf"; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 		14BD32A6218912C80038FB0A /* Autogen */ = {
 			isa = PBXGroup;
 			children = (
+				14BBF0C6219623E500C63EB4 /* colors.swift */,
 				14BD32A9218916FC0038FB0A /* assets.swift */,
 				14BD32A8218916FC0038FB0A /* fonts.swift */,
 			);
@@ -431,6 +436,7 @@
 				14F296BF215EE67E0059E277 /* UITableViewExtension.swift */,
 				14F296C3215EEA0A0059E277 /* UICollectionViewExtension.swift */,
 				14B6AFC7218B89F5006607B8 /* UserDefaultExtension.swift */,
+				14BBF0C821963B2100C63EB4 /* ASCellNodeExtension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -758,6 +764,7 @@
 				14BBF0C12194F28000C63EB4 /* GridItemTableViewCell.swift in Sources */,
 				14F296C4215EEA0A0059E277 /* UICollectionViewExtension.swift in Sources */,
 				14BBF0BA2194F28000C63EB4 /* FeaturedItemTableViewCell.swift in Sources */,
+				14BBF0C921963B2100C63EB4 /* ASCellNodeExtension.swift in Sources */,
 				14F296C2215EE8280059E277 /* FeaturedItemViewModel.swift in Sources */,
 				14BBF0C32194F36300C63EB4 /* MVideoSection.swift in Sources */,
 				14F296C0215EE67E0059E277 /* UITableViewExtension.swift in Sources */,
@@ -770,6 +777,7 @@
 				14F29674215EC7DD0059E277 /* AppDelegate.swift in Sources */,
 				14BBF0BB2194F28000C63EB4 /* SnapPagingLayout.swift in Sources */,
 				14B6AFEE218CF9FA006607B8 /* MStandarItem.swift in Sources */,
+				14BBF0C7219623E500C63EB4 /* colors.swift in Sources */,
 				14B6AFC8218B89F5006607B8 /* UserDefaultExtension.swift in Sources */,
 				14B6AFD5218CBF0B006607B8 /* MGridSection.swift in Sources */,
 				14BBF0BC2194F28000C63EB4 /* StandardItemCollectionViewCell.swift in Sources */,

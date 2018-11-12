@@ -27,9 +27,6 @@ class VideoSectionTableViewCell: ASCellNode, ASVideoNodeDelegate {
     let titleHeight     = 40.0
     let spaceBetweenTitleAndSubtitle = 2.0
     let spaceBetweenVideo = 16
-   // let centerButton = ASButtonNode()
-   // let soundButton  = ASButtonNode()
-   // let soundButtonSize: CGFloat = 30.0
     override init() {
         super.init()
         selectionStyle = .none
@@ -41,9 +38,6 @@ class VideoSectionTableViewCell: ASCellNode, ASVideoNodeDelegate {
         videoNode.delegate = self
         videoNode.muted = true
         soundState = SoundState.muted
-//        soundButton.style.preferredSize = CGSize(width: soundButtonSize, height: soundButtonSize)
-//        soundButton.setBackgroundImage(Asset.volumeOffIcon.image, for: .normal)
-//        soundButton.addTarget(self, action: #selector(VideoSectionTableViewCell.soundButtonPressed), forControlEvents: .touchDown)
         clipsToBounds = true
     }
     

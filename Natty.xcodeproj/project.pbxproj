@@ -76,6 +76,8 @@
 		14F296C0215EE67E0059E277 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F296BF215EE67E0059E277 /* UITableViewExtension.swift */; };
 		14F296C2215EE8280059E277 /* FeaturedItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F296C1215EE8280059E277 /* FeaturedItemViewModel.swift */; };
 		14F296C4215EEA0A0059E277 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F296C3215EEA0A0059E277 /* UICollectionViewExtension.swift */; };
+		14FC276521A4C60900B1F062 /* VideoControlNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC276421A4C60900B1F062 /* VideoControlNode.swift */; };
+		14FC276721A4C88A00B1F062 /* colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 14FC276621A4C88A00B1F062 /* colors.txt */; };
 		1A8F432B99F1AFE6348CCF33 /* Pods_NattyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954BDB6BA2EB20B14BC90EC9 /* Pods_NattyTests.framework */; };
 		35144AFEB89F29A379656770 /* Pods_NattyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BFD4C0EC867C985550BF50 /* Pods_NattyUITests.framework */; };
 		6B273BFE9938CDA0E0CB7982 /* Pods_Natty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5887355961D14CF0F39F8802 /* Pods_Natty.framework */; };
@@ -175,6 +177,8 @@
 		14F296BF215EE67E0059E277 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		14F296C1215EE8280059E277 /* FeaturedItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItemViewModel.swift; sourceTree = "<group>"; };
 		14F296C3215EEA0A0059E277 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		14FC276421A4C60900B1F062 /* VideoControlNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoControlNode.swift; sourceTree = "<group>"; };
+		14FC276621A4C88A00B1F062 /* colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = colors.txt; sourceTree = "<group>"; };
 		4214AC6D96898FB3E373DE4C /* Pods-NattyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NattyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NattyUITests/Pods-NattyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		436A9F7497D0DB36E808D8C8 /* Pods-NattyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NattyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NattyTests/Pods-NattyTests.release.xcconfig"; sourceTree = "<group>"; };
 		5887355961D14CF0F39F8802 /* Pods_Natty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Natty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				14BBF0A92194E29100C63EB4 /* VideoSectionTableViewCell.swift */,
+				14FC276421A4C60900B1F062 /* VideoControlNode.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 		14BD32792189125D0038FB0A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14FC276621A4C88A00B1F062 /* colors.txt */,
 				14BD327B218912AF0038FB0A /* Fonts */,
 				14F2967A215EC7DE0059E277 /* Assets.xcassets */,
 			);
@@ -584,6 +590,7 @@
 				14BD329F218912B00038FB0A /* SF-Pro-Display-Ultralight.otf in Resources */,
 				144DC5B8218D154600286021 /* Localizable.strings in Resources */,
 				14BD3293218912B00038FB0A /* roboto-light.ttf in Resources */,
+				14FC276721A4C88A00B1F062 /* colors.txt in Resources */,
 				14BD329E218912B00038FB0A /* SF-Pro-Display-HeavyItalic.otf in Resources */,
 				14BD3292218912B00038FB0A /* roboto-medium.ttf in Resources */,
 				14BD3294218912B00038FB0A /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
@@ -669,6 +676,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Natty/Pods-Natty-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FPSCounter/FPSCounter.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/LiquidTransition/LiquidTransition.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
@@ -682,6 +690,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FPSCounter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LiquidTransition.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
@@ -747,6 +756,7 @@
 			files = (
 				14BD32AA218916FD0038FB0A /* fonts.swift in Sources */,
 				14BD32782188FDBA0038FB0A /* MainTabbarController.swift in Sources */,
+				14FC276521A4C60900B1F062 /* VideoControlNode.swift in Sources */,
 				14B6AFCA218B8A8D006607B8 /* WindowSize.swift in Sources */,
 				14BBF0BF2194F28000C63EB4 /* GridFlowLayout.swift in Sources */,
 				14BBF0B92194F28000C63EB4 /* FeaturedSectionTableViewCell.swift in Sources */,

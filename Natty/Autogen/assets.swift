@@ -18,6 +18,8 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal static let like = ImageAsset(name: "like")
+  internal static let play = ImageAsset(name: "play")
   internal static let replayIcon = ImageAsset(name: "replay_icon")
   internal static let volumeOffIcon = ImageAsset(name: "volume_off_icon")
   internal static let volumeUpIcon = ImageAsset(name: "volume_up_icon")

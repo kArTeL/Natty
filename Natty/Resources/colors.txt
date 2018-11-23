@@ -1,1 +1,2 @@
 videoBackgroundColor     : #efefef
+blackTransparentCOlor    : #80FFFFFF

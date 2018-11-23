@@ -13,6 +13,7 @@ target 'Natty' do
   pod 'SwiftGen'
   pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
   pod 'FPSCounter', '~> 3.0'
+  pod 'LiquidTransition'
   
   target 'NattyTests' do
     inherit! :search_paths

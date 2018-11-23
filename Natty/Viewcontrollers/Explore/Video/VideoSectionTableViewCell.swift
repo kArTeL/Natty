@@ -23,10 +23,13 @@ class VideoSectionTableViewCell: ASCellNode, ASVideoNodeDelegate {
     let videoNode       = ASVideoNode()
     let titleLabel      = ASTextNode()
     let subtitleLabel   = ASTextNode()
+    
+    let videoControls = VideoControlNode()
     let subtitleHeight  = 40.0
     let titleHeight     = 40.0
     let spaceBetweenTitleAndSubtitle = 2.0
     let spaceBetweenVideo = 16
+    
     override init() {
         super.init()
         selectionStyle = .none
@@ -46,16 +49,15 @@ class VideoSectionTableViewCell: ASCellNode, ASVideoNodeDelegate {
         
         let width = WindowSize.size.width - UIConstants.inset*2
         let height = width * 0.6
-    
+        videoControls.style.preferredSize = CGSize(width: width, height: 55)
         videoNode.style.preferredSize = CGSize(width: width, height: height)
         if let videoURL = viewModel.videoURL {
             videoNode.asset = AVAsset(url: videoURL)
             videoNode.contentMode = .center
             videoNode.gravity = AVLayerVideoGravity.resizeAspectFill.rawValue
-            videoNode.shouldAutoplay = true
+            videoNode.shouldAutoplay = false
             videoNode.shouldAutorepeat = false
             videoNode.shouldCacheImage = true
-            
         }
         titleLabel.attributedText = NSAttributedString(
             string: viewModel.title,
@@ -85,15 +87,21 @@ class VideoSectionTableViewCell: ASCellNode, ASVideoNodeDelegate {
             alignItems: .start,
             children: [titleLabel, subtitleLabel])
         
-       // let soundLayout = ASAbsoluteLayoutSpec(children: [soundInsetLayout])
-        //let videoPlayerLayout = ASOverlayLayoutSpec(child: videoNode, overlay: soundLayout)
+        
+        //UIEdgeInsets insets = UIEdgeInsetsMake(INFINITY, 12, 12, 12);
+        let controlInsets = UIEdgeInsets(top: CGFloat.infinity, left: 0, bottom: 5, right: 0)
+        let controlInsetSpec = ASInsetLayoutSpec(insets: controlInsets, child: videoControls)
+        
+        
+        
+        let videoPlayerLayout = ASOverlayLayoutSpec(child: videoNode, overlay: controlInsetSpec)
         
         let stack  = ASStackLayoutSpec(
             direction: .vertical,
             spacing: CGFloat(spaceBetweenVideo),
             justifyContent: .start,
             alignItems: .stretch,
-            children: [labelStack, videoNode])
+            children: [labelStack, videoPlayerLayout])
         
         let insetLayout = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 0, left: UIConstants.inset, bottom: UIConstants.bottomPadding, right: UIConstants.inset), child: stack)
 

@@ -13,6 +13,11 @@ class FeaturedItemTableViewCell: ASCellNode {
     let imageView = ASNetworkImageNode()
     let titleLabel = ASTextNode()
     let subtitleLabel = ASTextNode()
+    
+//    var isTouched: Bool = false {
+//        
+//    }
+    
     override init() {
         super.init()
         imageView.contentMode = .scaleAspectFill
@@ -25,13 +30,8 @@ class FeaturedItemTableViewCell: ASCellNode {
             NSAttributedString.Key.foregroundColor: UIColor.darkGray,
             NSAttributedString.Key.kern: 0.2
             ])
-//        backgroundColor = .blue
-//        subtitleLabel.backgroundColor = .red
         clipsToBounds = true
         cornerRadius = 1.5
-//        addSubnode(imageView)
-//        addSubnode(titleLabel)
-//        addSubnode(subtitleLabel)
     }
 
     convenience init(viewModel: FeaturedItemViewModel) {

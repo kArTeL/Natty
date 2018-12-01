@@ -9,6 +9,12 @@
 import AsyncDisplayKit
 
 
+protocol VideoDelegate: class {
+    func didTapFullScreen(videoNode: ASVideoNode?, videoSection: VideoSectionTableViewCell)
+}
+
+
+
 enum SoundState: Int {
     case muted = 0
     case on
@@ -16,15 +22,18 @@ enum SoundState: Int {
 
 
 /// Video section table view cell.
-class VideoSectionTableViewCell: ASCellNode, ASVideoNodeDelegate {
+class VideoSectionTableViewCell: ASCellNode {
+    
+    var shouldPause = true
     
     var soundState = SoundState.muted
+    weak var videoDelegate: VideoDelegate?
     
     let videoNode       = ASVideoNode()
     let titleLabel      = ASTextNode()
     let subtitleLabel   = ASTextNode()
     
-    let videoControls = VideoControlNode()
+   // let videoControls = VideoControlNode()
     let subtitleHeight  = 40.0
     let titleHeight     = 40.0
     let spaceBetweenTitleAndSubtitle = 2.0
@@ -39,23 +48,27 @@ class VideoSectionTableViewCell: ASCellNode, ASVideoNodeDelegate {
         videoNode.clipsToBounds = true
         videoNode.backgroundColor = ColorName.videoBackgroundColor.color
         videoNode.delegate = self
-        videoNode.muted = true
+        videoNode.muted = false
+        //videoNode.shouldAutoplay = true
+    
         soundState = SoundState.muted
+        videoNode.onDidLoad { (node) in
+            self.videoNode.play()
+            self.videoNode.shouldAutorepeat = true
+        }
         clipsToBounds = true
     }
     
-    convenience init(viewModel: VideoSectionViewModel) {
+    convenience init(viewModel: VideoSectionViewModel, delegate: VideoDelegate) {
         self.init()
-        
+        self.videoDelegate = delegate
         let width = WindowSize.size.width - UIConstants.inset*2
         let height = width * 0.6
-        videoControls.style.preferredSize = CGSize(width: width, height: 55)
         videoNode.style.preferredSize = CGSize(width: width, height: height)
         if let videoURL = viewModel.videoURL {
             videoNode.asset = AVAsset(url: videoURL)
             videoNode.contentMode = .center
             videoNode.gravity = AVLayerVideoGravity.resizeAspectFill.rawValue
-            videoNode.shouldAutoplay = false
             videoNode.shouldAutorepeat = false
             videoNode.shouldCacheImage = true
         }
@@ -76,10 +89,6 @@ class VideoSectionTableViewCell: ASCellNode, ASVideoNodeDelegate {
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-  
-        //soundButton.style.preferredSize = CGSize(width: soundButtonSize, height: soundButtonSize)
-    //    let soundInsets = UIEdgeInsets(top: CGFloat.infinity, left: WindowSize.size.width - UIConstants.inset*2 - soundButtonSize*1.5, bottom: 10, right: 0)
-      //  let soundInsetLayout = ASInsetLayoutSpec(insets: soundInsets, child: soundButton)
         let labelStack  =  ASStackLayoutSpec(
             direction: .vertical,
             spacing: 1,
@@ -87,48 +96,46 @@ class VideoSectionTableViewCell: ASCellNode, ASVideoNodeDelegate {
             alignItems: .start,
             children: [titleLabel, subtitleLabel])
         
-        
-        //UIEdgeInsets insets = UIEdgeInsetsMake(INFINITY, 12, 12, 12);
-        let controlInsets = UIEdgeInsets(top: CGFloat.infinity, left: 0, bottom: 5, right: 0)
-        let controlInsetSpec = ASInsetLayoutSpec(insets: controlInsets, child: videoControls)
-        
-        
-        
-        let videoPlayerLayout = ASOverlayLayoutSpec(child: videoNode, overlay: controlInsetSpec)
-        
         let stack  = ASStackLayoutSpec(
             direction: .vertical,
             spacing: CGFloat(spaceBetweenVideo),
             justifyContent: .start,
             alignItems: .stretch,
-            children: [labelStack, videoPlayerLayout])
+            children: [labelStack, videoNode])
         
         let insetLayout = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 0, left: UIConstants.inset, bottom: UIConstants.bottomPadding, right: UIConstants.inset), child: stack)
 
         return insetLayout
     }
+}
+
+extension VideoSectionTableViewCell: ASVideoNodeDelegate {
     
-//    @objc func soundButtonPressed() {
-//        switch soundState {
-//        case .muted:
-//            soundState = SoundState.on
-//            break
-//        default:
-//            soundState = SoundState.muted
-//            break
-//        }
-//        updateSoundButton(soundState: soundState)
-//    }
-//    
-//    func updateSoundButton(soundState: SoundState) {
-//
-//        switch soundState {
-//        case .muted:
-//            soundButton.setBackgroundImage(Asset.volumeOffIcon.image, for: .normal)
-//            break
-//        default:
-//            soundButton.setBackgroundImage(Asset.volumeUpIcon.image, for: .normal)
-//            break
-//        }
-//    }
+    func videoNode(_ videoNode: ASVideoNode, shouldChangePlayerStateTo state: ASVideoNodePlayerState) -> Bool {
+        var returnValue = true
+        switch state {
+        case .paused:
+            returnValue = shouldPause
+            shouldPause = true
+        default:
+            break
+        }
+        return returnValue
+    }
+    
+    func didTap(_ videoNode: ASVideoNode) {
+        shouldPause = false
+        self.videoDelegate?.didTapFullScreen(videoNode: videoNode, videoSection: self)
+    }
+    
+    func videoDidPlay(toEnd videoNode: ASVideoNode) {
+    }
+    
+    func videoNodeDidStartInitialLoading(_ videoNode: ASVideoNode) {
+        print("showLoading")
+    }
+    
+    func videoNodeDidFinishInitialLoading(_ videoNode: ASVideoNode) {
+        print("hideLoading")
+    }
 }

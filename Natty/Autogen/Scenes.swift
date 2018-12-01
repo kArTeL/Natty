@@ -19,6 +19,8 @@ internal enum StoryboardScene {
   }
   internal enum Main: StoryboardType {
     internal static let storyboardName = "Main"
+
+    internal static let videoFullScreenViewController = SceneType<Natty.VideoFullScreenViewController>(storyboard: Main.self, identifier: "VideoFullScreenViewController")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name

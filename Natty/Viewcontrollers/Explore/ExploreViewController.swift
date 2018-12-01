@@ -8,7 +8,7 @@
 
 import UIKit
 import AsyncDisplayKit
-
+import Hero
 
 class ExploreViewController: ASViewController<ASDisplayNode>, ASTableDataSource, ASTableDelegate  {
     
@@ -58,9 +58,7 @@ class ExploreViewController: ASViewController<ASDisplayNode>, ASTableDataSource,
         case .video:
             let videoSection = exploreListViewModel.section(indexPath: indexPath) as! MVideoSection
             let videoSectionViewModel = VideoSectionViewModel(section: videoSection)
-//            let cellWidth  = WindowSize.size.width - UIConstants.inset * 2
-//            let cellSize = CGSize(width: cellWidth, height: cellWidth * 4/3 + 60 + UIConstants.bottomPadding)
-            return VideoSectionTableViewCell(viewModel: videoSectionViewModel)
+            return VideoSectionTableViewCell(viewModel: videoSectionViewModel, delegate: self)
         default:
             let standardSection = exploreListViewModel.section(indexPath: indexPath) as! MStandardSection
             let standardSectionViewModel = StandardSectionViewModel(standardSection: standardSection)
@@ -70,7 +68,45 @@ class ExploreViewController: ASViewController<ASDisplayNode>, ASTableDataSource,
      //   return node
     }
     
+//    func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
+//        switch exploreListViewModel.sectionType(sectionIndex: indexPath.row) {
+//        case .video:
+//            let videoSection = exploreListViewModel.section(indexPath: indexPath) as! MVideoSection
+//            let videoSectionViewModel = VideoSectionViewModel(section: videoSection)
+//            let fullScreenVideoController = StoryboardScene.Main.videoFullScreenViewController.instantiate()
+//            fullScreenVideoController.videoSectionViewModel = videoSectionViewModel
+//            fullScreenVideoController.hero.isEnabled = true
+//            fullScreenVideoController.hero.modalAnimationType = .zoom
+//            self.present(fullScreenVideoController, animated: true, completion: nil)
+//
+//            break
+//        default:
+//            break
+//        }
+//
+//    }
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.1
     }
+    
+    func presentVideoController() {
+        
+    }
 }
+
+
+extension ExploreViewController: VideoDelegate {
+    func didTapFullScreen(videoNode: ASVideoNode?, videoSection: VideoSectionTableViewCell) {
+        if let videoNode = videoNode {
+            
+            let fullScreenVideoController = StoryboardScene.Main.videoFullScreenViewController.instantiate()
+            fullScreenVideoController.videoNode = videoNode
+            fullScreenVideoController.videoCellSection = videoSection
+            self.present(fullScreenVideoController, animated: true, completion: nil)
+            
+        }
+    }
+    
+
+}
+

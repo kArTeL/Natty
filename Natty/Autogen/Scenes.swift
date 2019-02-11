@@ -20,6 +20,8 @@ internal enum StoryboardScene {
   internal enum Main: StoryboardType {
     internal static let storyboardName = "Main"
 
+    internal static let storyDetailTableViewController = SceneType<Natty.StoryDetailTableViewController>(storyboard: Main.self, identifier: "StoryDetailTableViewController")
+
     internal static let videoFullScreenViewController = SceneType<Natty.VideoFullScreenViewController>(storyboard: Main.self, identifier: "VideoFullScreenViewController")
   }
 }

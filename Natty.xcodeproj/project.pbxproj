@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14078B0D21BF1B560074FA40 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14078B0C21BF1B560074FA40 /* UIViewControllerExtension.swift */; };
 		142A1CCC21AF511E002F6C03 /* StoryDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A1CCB21AF511E002F6C03 /* StoryDetailTableViewController.swift */; };
 		142A1CCF21AF5191002F6C03 /* StoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A1CCE21AF5191002F6C03 /* StoryDetailViewModel.swift */; };
 		142A1CD121AF535A002F6C03 /* VideoFullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A1CD021AF535A002F6C03 /* VideoFullScreenViewController.swift */; };
@@ -15,6 +16,7 @@
 		147380E321B0A68D00E61216 /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147380E021B0A68D00E61216 /* Segues.swift */; };
 		147380E421B0A68D00E61216 /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147380E121B0A68D00E61216 /* strings.swift */; };
 		147380E621B1DF3F00E61216 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147380E521B1DF3F00E61216 /* TimelineView.swift */; };
+		14B4A31B2204B67100BFFDB7 /* StoryDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4A31A2204B67100BFFDB7 /* StoryDetailManager.swift */; };
 		14B6AFC8218B89F5006607B8 /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6AFC7218B89F5006607B8 /* UserDefaultExtension.swift */; };
 		14B6AFCA218B8A8D006607B8 /* WindowSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6AFC9218B8A8D006607B8 /* WindowSize.swift */; };
 		14B6AFD1218CBEF0006607B8 /* MFeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6AFCE218CBEF0006607B8 /* MFeaturedItem.swift */; };
@@ -109,6 +111,7 @@
 
 /* Begin PBXFileReference section */
 		0EFA0A029DB8066DF69CC93B /* Pods-NattyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NattyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NattyTests/Pods-NattyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		14078B0C21BF1B560074FA40 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		142A1CCB21AF511E002F6C03 /* StoryDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailTableViewController.swift; sourceTree = "<group>"; };
 		142A1CCE21AF5191002F6C03 /* StoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailViewModel.swift; sourceTree = "<group>"; };
 		142A1CD021AF535A002F6C03 /* VideoFullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFullScreenViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 		147380E021B0A68D00E61216 /* Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
 		147380E121B0A68D00E61216 /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
 		147380E521B1DF3F00E61216 /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		14B4A31A2204B67100BFFDB7 /* StoryDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailManager.swift; sourceTree = "<group>"; };
 		14B6AFC7218B89F5006607B8 /* UserDefaultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtension.swift; sourceTree = "<group>"; };
 		14B6AFC9218B8A8D006607B8 /* WindowSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowSize.swift; sourceTree = "<group>"; };
 		14B6AFCE218CBEF0006607B8 /* MFeaturedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFeaturedItem.swift; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				142A1CCB21AF511E002F6C03 /* StoryDetailTableViewController.swift */,
+				14B4A31A2204B67100BFFDB7 /* StoryDetailManager.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -480,6 +485,7 @@
 				14F296C3215EEA0A0059E277 /* UICollectionViewExtension.swift */,
 				14B6AFC7218B89F5006607B8 /* UserDefaultExtension.swift */,
 				14BBF0C821963B2100C63EB4 /* ASCellNodeExtension.swift */,
+				14078B0C21BF1B560074FA40 /* UIViewControllerExtension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -720,6 +726,7 @@
 				"${BUILT_PRODUCTS_DIR}/SimulatorStatusMagic/SimulatorStatusMagic.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Transitional/Transitional.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -734,6 +741,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimulatorStatusMagic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Transitional.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -795,7 +803,9 @@
 				14BD32782188FDBA0038FB0A /* MainTabbarController.swift in Sources */,
 				147380E221B0A68D00E61216 /* Scenes.swift in Sources */,
 				14FC276521A4C60900B1F062 /* VideoControlNode.swift in Sources */,
+				14B4A31B2204B67100BFFDB7 /* StoryDetailManager.swift in Sources */,
 				142A1CD121AF535A002F6C03 /* VideoFullScreenViewController.swift in Sources */,
+				14078B0D21BF1B560074FA40 /* UIViewControllerExtension.swift in Sources */,
 				14B6AFCA218B8A8D006607B8 /* WindowSize.swift in Sources */,
 				14BBF0BF2194F28000C63EB4 /* GridFlowLayout.swift in Sources */,
 				14BBF0B92194F28000C63EB4 /* FeaturedSectionTableViewCell.swift in Sources */,

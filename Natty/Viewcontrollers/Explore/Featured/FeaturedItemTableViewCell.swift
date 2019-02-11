@@ -79,5 +79,8 @@ class FeaturedItemTableViewCell: ASCellNode {
 
         return stack
     }
+    
+    
+   
 
 }

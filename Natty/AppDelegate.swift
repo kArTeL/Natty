@@ -36,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.backgroundColor = UIColor.white
         window.rootViewController = MainTabbarController()
         window.makeKeyAndVisible()
+        window.tintColor = .black
         self.window = window
         
     }

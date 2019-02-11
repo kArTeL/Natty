@@ -27,6 +27,7 @@ PODS:
     - PINRemoteImage/iOS (= 3.0.0-beta.13)
     - PINRemoteImage/PINCache
     - Texture/Core
+  - Transitional (0.2.0)
 
 DEPENDENCIES:
   - FPSCounter (~> 3.0)
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - SwiftGen
   - SwiftyUserDefaults (= 4.0.0-alpha.1)
   - Texture
+  - Transitional
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -49,6 +51,7 @@ SPEC REPOS:
     - SwiftGen
     - SwiftyUserDefaults
     - Texture
+    - Transitional
 
 SPEC CHECKSUMS:
   FPSCounter: 38f076ebc06a21d71b4e9e178e172ed766233189
@@ -61,7 +64,8 @@ SPEC CHECKSUMS:
   SwiftGen: e5b047067aa84082826a0c4f1c4c2ddc95bcf74c
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
   Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
+  Transitional: 65e4d04d315bebe2209744120fc9557b6de04b9b
 
-PODFILE CHECKSUM: 31f4aed49c2ca8ca4e781f1247441ee8f23198c8
+PODFILE CHECKSUM: 4516232fd423ccaf01958fefe67b3cb5c1a0752e
 
 COCOAPODS: 1.5.3

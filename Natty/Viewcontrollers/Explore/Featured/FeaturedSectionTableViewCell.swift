@@ -99,4 +99,10 @@ extension FeaturedSectionTableViewCell: ASCollectionDataSource, ASCollectionDele
           
         }
     }
+    
+    func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath) {
+        let featuredItem = featuredSectionViewModel.item(indexPath: indexPath)
+        StoryDetailManager.showDetail(withBannerURL: URL(string: featuredItem.image)!, title: featuredItem.title, detail: featuredItem.subtitle)
+    }
+  
 }

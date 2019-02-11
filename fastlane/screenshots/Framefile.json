@@ -1,13 +1,6 @@
 {
     "device_frame_version": "latest",
     "default": {
-      "keyword": {
-        "font": "./fonts/IndieFlower.ttf"
-      },
-      "title": {
-        "font": "./fonts/ShadowsIntoLight.ttf",
-        "color": "#545454"
-      },
       "background": "./background.jpg",
       "padding": 50,
       "show_complete_frame": true,
@@ -20,11 +13,11 @@
         "filter": "01MainScreen",
         "keyword": {
           "color": "#d21559",
-          "text": "Keyword1"
+          "text": "Descubre tu mundo"
         },
         "title": {
             "color": "#d2e159",
-            "text": "title1"
+            "text": "en un App"
         }
 
       },

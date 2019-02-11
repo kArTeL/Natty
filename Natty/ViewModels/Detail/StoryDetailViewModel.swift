@@ -8,14 +8,15 @@
 
 import UIKit
 
-class StoryDetailViewModel: NSObject {
-    var title: String {
-        return ""
+struct StoryDetailViewModel {
+    var title: String = ""
+    var detail: String = ""
+    var image: URL?
+    
+    init(title: String ,detail: String, image: URL ) {
+        self.title = title
+        self.detail = detail
+        self.image = image
     }
-    var detail: String {
-        return ""
-    }
-    var image: URL {
-        return URL(string: "")!
-    }
+    init() {}
 }

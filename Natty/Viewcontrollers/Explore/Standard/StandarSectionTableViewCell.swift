@@ -37,6 +37,8 @@ class StandardSectionTableViewCell: ASCellNode {
                 NSAttributedString.Key.foregroundColor: UIColor.black,
                 NSAttributedString.Key.kern: -0.3
             ])
+       
+      
         subtitleLabel.attributedText = NSAttributedString(
             string: sectionViewModel.subtitle,
             attributes: [
@@ -96,5 +98,11 @@ extension StandardSectionTableViewCell: ASCollectionDataSource, ASCollectionDele
             }
             
         }
+    }
+    
+    func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath) {
+        let standardSectionItem = standardSectionViewModel.item(indexPath: indexPath)
+        StoryDetailManager.showDetail(withBannerURL: URL(string: standardSectionItem.image)!, title: standardSectionItem.title, detail: standardSectionItem.subtitle)
+
     }
 }

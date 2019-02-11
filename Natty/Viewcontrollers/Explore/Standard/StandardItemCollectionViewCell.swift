@@ -36,6 +36,12 @@ class StandardItemCollectionViewCell: ASCellNode {
                 NSAttributedString.Key.foregroundColor: UIColor.darkGray,
                 NSAttributedString.Key.kern: 0.2
             ])
+        subtitleLabel.truncationAttributedText = NSAttributedString(string: " ...")
+        subtitleLabel.additionalTruncationMessage = NSAttributedString(string: "see more", attributes: [
+            NSAttributedString.Key.font: FontFamily.SFProDisplay.bold.font(size: 15),
+            NSAttributedString.Key.foregroundColor: UIColor.darkGray,
+            NSAttributedString.Key.kern: 0.2
+            ])
         subtitleLabel.attributedText = NSAttributedString(
             string: viewModel.subtitle,
             attributes: [

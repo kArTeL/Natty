@@ -33,11 +33,19 @@ class VideoSectionTableViewCell: ASCellNode {
     let titleLabel      = ASTextNode()
     let subtitleLabel   = ASTextNode()
     
+//    let loadingActivityIndicator = ASDisplayNode { () -> UIView in
+//        let activityIndicator = UIActivityIndicatorView(style: .white)
+//        activityIndicator.color = .black
+//        activityIndicator.backgroundColor = .black
+//        return activityIndicator
+//    }
+    
    // let videoControls = VideoControlNode()
     let subtitleHeight  = 40.0
     let titleHeight     = 40.0
     let spaceBetweenTitleAndSubtitle = 2.0
     let spaceBetweenVideo = 16
+    
     
     override init() {
         super.init()
@@ -65,6 +73,7 @@ class VideoSectionTableViewCell: ASCellNode {
         let width = WindowSize.size.width - UIConstants.inset*2
         let height = width * 0.6
         videoNode.style.preferredSize = CGSize(width: width, height: height)
+        
         if let videoURL = viewModel.videoURL {
             videoNode.asset = AVAsset(url: videoURL)
             videoNode.contentMode = .center
@@ -89,6 +98,10 @@ class VideoSectionTableViewCell: ASCellNode {
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        
+//        let centerActivityIndicatorSpec = ASCenterLayoutSpec(centeringOptions: ASCenterLayoutSpecCenteringOptions.XY, sizingOptions: ASCenterLayoutSpecSizingOptions.minimumXY, child: loadingActivityIndicator)
+//
+//        let overlaySpec = ASOverlayLayoutSpec(child: videoNode, overlay: centerActivityIndicatorSpec)
         let labelStack  =  ASStackLayoutSpec(
             direction: .vertical,
             spacing: 1,
@@ -125,7 +138,10 @@ extension VideoSectionTableViewCell: ASVideoNodeDelegate {
     
     func didTap(_ videoNode: ASVideoNode) {
         shouldPause = false
-        self.videoDelegate?.didTapFullScreen(videoNode: videoNode, videoSection: self)
+        if (videoNode.playerState == .playing) {
+            self.videoDelegate?.didTapFullScreen(videoNode: videoNode, videoSection: self)
+        }
+        
     }
     
     func videoDidPlay(toEnd videoNode: ASVideoNode) {

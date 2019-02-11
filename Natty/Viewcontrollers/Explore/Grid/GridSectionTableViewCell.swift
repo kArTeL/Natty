@@ -99,5 +99,13 @@ extension GridSectionTableViewCell: ASCollectionDataSource, ASCollectionDelegate
             
         }
     }
+    
+    func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath) {
+        
+        let gridSectionItem = gridSectionViewModel.item(indexPath: indexPath)
+        StoryDetailManager.showDetail(withBannerURL: URL(string: gridSectionItem.image)!, title: gridSectionItem.title, detail: gridSectionItem.subtitle)
+        
+    }
+    
 }
 

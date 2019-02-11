@@ -9,6 +9,7 @@
 import UIKit
 import AsyncDisplayKit
 import Hero
+import Transitional
 
 class ExploreViewController: ASViewController<ASDisplayNode>, ASTableDataSource, ASTableDelegate  {
     
@@ -68,23 +69,6 @@ class ExploreViewController: ASViewController<ASDisplayNode>, ASTableDataSource,
      //   return node
     }
     
-//    func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
-//        switch exploreListViewModel.sectionType(sectionIndex: indexPath.row) {
-//        case .video:
-//            let videoSection = exploreListViewModel.section(indexPath: indexPath) as! MVideoSection
-//            let videoSectionViewModel = VideoSectionViewModel(section: videoSection)
-//            let fullScreenVideoController = StoryboardScene.Main.videoFullScreenViewController.instantiate()
-//            fullScreenVideoController.videoSectionViewModel = videoSectionViewModel
-//            fullScreenVideoController.hero.isEnabled = true
-//            fullScreenVideoController.hero.modalAnimationType = .zoom
-//            self.present(fullScreenVideoController, animated: true, completion: nil)
-//
-//            break
-//        default:
-//            break
-//        }
-//
-//    }
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.1
     }
@@ -98,12 +82,10 @@ class ExploreViewController: ASViewController<ASDisplayNode>, ASTableDataSource,
 extension ExploreViewController: VideoDelegate {
     func didTapFullScreen(videoNode: ASVideoNode?, videoSection: VideoSectionTableViewCell) {
         if let videoNode = videoNode {
-            
             let fullScreenVideoController = StoryboardScene.Main.videoFullScreenViewController.instantiate()
             fullScreenVideoController.videoNode = videoNode
             fullScreenVideoController.videoCellSection = videoSection
-            self.present(fullScreenVideoController, animated: true, completion: nil)
-            
+            transitionalPresentation(fullScreenVideoController, style: .zoomIn)
         }
     }
     

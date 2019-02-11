@@ -7,6 +7,7 @@
 //
 
 import AsyncDisplayKit
+import Transitional
 
 class VideoFullScreenViewController: UIViewController {
     
@@ -258,7 +259,8 @@ class VideoFullScreenViewController: UIViewController {
     @objc func finishVideo() {
         if let videoSectionCell = videoCellSection {
             videoSectionCell.videoNode.currentItem?.seek(to:  CMTime.zero, completionHandler: nil)
-            dismiss(animated: true, completion: nil)
+            transitionalDismissal(TransitionalAnimationStyle.zoomOut)
+            //dismiss(animated: true, completion: nil)
         }
        
     }

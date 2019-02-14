@@ -38,7 +38,5 @@ class FeaturedSectionViewModel {
     func item(indexPath: IndexPath) -> MFeaturedItem {
         return section.items[indexPath.row] as! MFeaturedItem
     }
-    
-    
-    
+
 }
